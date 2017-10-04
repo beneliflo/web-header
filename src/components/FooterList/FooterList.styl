@@ -1,21 +1,21 @@
-@import '../../styles/base'
+@import '../../styles/mixin'
 
 .footer-link
   color #4A4A4A
   display inline-block
   position relative
   width 100%
-  
+
   &:hover
     color #222
-  
+
   +breakpoint("desktop", "max")
     display none
-  
+
   b
     font-weight normal
     color #222
-  
+
   span span
     color #222
 
@@ -30,7 +30,7 @@
     top 50%
     transform translateY(-50%)
     margin-left 10px
-      
+
   &:nth-child(2)
     margin-left 60px
 
@@ -38,7 +38,7 @@
     margin-right 10px
     position relative
     top -2px
-  
+
   .text
     white-space nowrap
     overflow hidden
@@ -46,7 +46,7 @@
     max-width calc(100% - 40px)
     display inline-block
     vertical-align top
-  
+
   svg
     display inline-block
     vertical-align middle

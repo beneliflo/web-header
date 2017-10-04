@@ -1,11 +1,11 @@
-@import '../../styles/base'
+@import '../../styles/mixin'
 
 .item
   margin 0
-  
+
   +breakpoint("desktop", "max")
     border-top 1px solid rgba(black, .10)
-    
+
     &:first-child
       border-top 0
 
@@ -25,17 +25,17 @@
   display block
   font-size 16px
   color black
-  
+
   +breakpoint("desktop", "max")
     font-weight 500
     &:hover
       color black
-    
+
     a&
       .text
         padding-right 10px
         position relative
-        
+
         &:after
           content ""
           width 0
@@ -54,7 +54,7 @@
     margin 0
     padding 0
     line-height 31px
-    
+
     > span
       padding 30px 0
 
