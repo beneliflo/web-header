@@ -149,6 +149,14 @@
 .header :global(.container)
   width auto
 
+  &:after
+    clear both
+
+  &:after,
+  &:before
+    content " "
+    display table
+
 .header :focus
   outline none
 
