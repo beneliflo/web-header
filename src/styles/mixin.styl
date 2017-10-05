@@ -48,43 +48,41 @@ $font-size-large ?=        18px
 $font-size-small ?=        13px
 $font-size-micro ?=        12px
 
-$font-size-h1 ?=           floor($font-size-base * 2.6) // ~36px
-$font-size-h2 ?=           floor($font-size-base * 2.15) // ~30px
-$font-size-h3 ?=           ceil($font-size-base * 1.7) // ~24px
-$font-size-h4 ?=           ceil($font-size-base * 1.25) // ~18px
-$font-size-h5 ?=           $font-size-base
-$font-size-h6 ?=           ceil($font-size-base * 0.85) // ~12px
-
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base ?=       2 // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed ?=   floor($font-size-base * $line-height-base) // ~20px
 
-// Variables
-
-$grid-gutter-width ?= 30px
-$navbar-padding-horizontal ?=              floor($grid-gutter-width / 2)
-
 // Basics of a navbar
 $navbar-mobile-height ?=                   70px
 $navbar-desktop-height ?=                  115px
-
-// Navbar links
-$navbar-default-link-color ?=              $color-text-black
-$navbar-default-link-hover-color ?=        black
-$navbar-dark-link-color ?=                 $color-text-contrast-light
-$navbar-dark-link-hover-color ?=           white
-
-// Navbar toggle
-$navbar-toggle-background-color ?=         $bg-color-dark
-$navbar-toggle-background-hover-color ?=   black
-
 
 // Mixins
 
 vertical-center-elem($element-height, $container-height)
   margin-top (($container-height - $element-height) / 2)
   margin-bottom (($container-height - $element-height) / 2)
+
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+// contenteditable attribute is included anywhere else in the document.
+// Otherwise it causes space to appear at the top and bottom of elements
+// that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+// `:before` to contain the top-margins of child elements.
+//
+// Source http://nicolasgallagher.com/micro-clearfix-hack/
+clearfix()
+  &:before,
+  &:after
+    content " " // 1
+    display table // 2
+
+  &:after
+    clear both
 
 
 // Breakpoints

@@ -14,6 +14,14 @@
   p
     font-size 14px
 
+  & :global(.container)
+    width auto
+    max-width 1016px
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
 .header
   background-color white
   border-bottom 1px solid rgba(black, 0.1)
@@ -145,17 +153,6 @@
 
    :global .btn + .btn
      margin-left 18px
-
-.header :global(.container)
-  width auto
-
-  &:after
-    clear both
-
-  &:after,
-  &:before
-    content " "
-    display table
 
 .header :focus
   outline none
